@@ -12,9 +12,7 @@ G_ALL_N_SET = 94
 def g_number():     return chr(randint(48, 57))
 def g_lower_case(): return chr(randint(97, 122))
 def g_upper_case(): return chr(randint(65, 90))
-def g_symbol():     return chr(random.choice([
-    35, 36, 37, 38, 40, 41, 42, 43, 45, 46, 47, 58, 59, 61, 63, 64, 91, 92, 93, 123, 124, 125
-]))
+def g_symbol():     return chr(random.choice(G_SYMBOL_SET))
 def g_all_printable(): return chr(randint(33, 126))
 
 def generate_password(length: int, lowers: bool, numbers: bool, uppers: bool, symbols: bool) -> str:

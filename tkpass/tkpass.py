@@ -52,9 +52,9 @@ class MainGUI:
         self.entropy_bar_w = ttk.Progressbar(self.entropy_frame, orient=tk.HORIZONTAL, variable=self.entropy_bar_w_val)    # range from 0 to 100
         self.entropy_bar_m = ttk.Progressbar(self.entropy_frame, orient=tk.HORIZONTAL, variable=self.entropy_bar_m_val)    # range from 0 to 100
         self.entropy_bar_s = ttk.Progressbar(self.entropy_frame, orient=tk.HORIZONTAL, variable=self.entropy_bar_s_val)    # range from 0 to 100
-        self.weak_lbl = ttk.Label(self.entropy_frame, text="weak", foreground='black')        # #a83232
-        self.medium_lbl = ttk.Label(self.entropy_frame, text="medium", foreground='black')    # #a6a832
-        self.strong_lbl = ttk.Label(self.entropy_frame, text="strong", foreground='black')    # #32a83e
+        self.weak_lbl = ttk.Label(self.entropy_frame, text="weak")        # #a83232
+        self.medium_lbl = ttk.Label(self.entropy_frame, text="medium")    # #a6a832
+        self.strong_lbl = ttk.Label(self.entropy_frame, text="strong")    # #32a83e
 
         self.bottom_frame = ttk.Frame(self.frame)
         self.pass_btn = ttk.Button(self.bottom_frame, text="Generate", command=self.on_generate_pressed, width=10)

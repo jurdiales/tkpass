@@ -4,11 +4,14 @@
 Lightweight password generator in Python using TKinter.
 
 ## Screenshots
-<style>
-td, th {
-   border: none!important;
-}
-</style>
+
+<html>
+   <style>
+   td, th {
+      border: none!important;
+   }
+   </style>
+</html>
 
 | light | dark |
 | :---- | :--- |

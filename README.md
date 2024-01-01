@@ -5,14 +5,6 @@ Lightweight password generator in Python using TKinter.
 
 ## Screenshots
 
-<html>
-   <style>
-   td, th {
-      border: none!important;
-   }
-   </style>
-</html>
-
 | light | dark |
 | :---- | :--- |
 ![alt](images/light.png) | ![alt](images/dark.png)
@@ -21,15 +13,15 @@ Lightweight password generator in Python using TKinter.
 
 Go to to inside **tkpass** folder where the **setup.py** file is, open a terminal and execute the following commad:
 
-```
+```python
 pip install .
 ```
 
 ## How to Use
 
-Once it is installed via **pip**, simply execute the following command in a terminal:
+Once tkpass is installed via **pip**, simply execute the following command in a terminal:
 
-```
+```python
 python -m tkpass
 
 # default theme is light, for dark theme execute

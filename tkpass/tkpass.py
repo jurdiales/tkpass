@@ -52,9 +52,9 @@ class MainGUI:
         self.entropy_bar_w = ttk.Progressbar(self.entropy_frame, orient=tk.HORIZONTAL, variable=self.entropy_bar_w_val)    # range from 0 to 100
         self.entropy_bar_m = ttk.Progressbar(self.entropy_frame, orient=tk.HORIZONTAL, variable=self.entropy_bar_m_val)    # range from 0 to 100
         self.entropy_bar_s = ttk.Progressbar(self.entropy_frame, orient=tk.HORIZONTAL, variable=self.entropy_bar_s_val)    # range from 0 to 100
-        self.weak_lbl = ttk.Label(self.entropy_frame, text="weak")
-        self.medium_lbl = ttk.Label(self.entropy_frame, text="medium")
-        self.strong_lbl = ttk.Label(self.entropy_frame, text="strong")
+        self.weak_lbl = ttk.Label(self.entropy_frame, text="weak", foreground='black')        # #a83232
+        self.medium_lbl = ttk.Label(self.entropy_frame, text="medium", foreground='black')    # #a6a832
+        self.strong_lbl = ttk.Label(self.entropy_frame, text="strong", foreground='black')    # #32a83e
 
         self.bottom_frame = ttk.Frame(self.frame)
         self.pass_btn = ttk.Button(self.bottom_frame, text="Generate", command=self.on_generate_pressed, width=10)
@@ -63,11 +63,11 @@ class MainGUI:
         self.configure()
     
     def configure(self):
-        self.top_frame.pack(pady=10)
+        self.top_frame.pack(pady=10, expand=True)
         self.length_lbl.pack(side=tk.LEFT, padx=(0, 5))
         self.length_txt.pack(side=tk.RIGHT)
 
-        self.check_frame.pack()
+        self.check_frame.pack(expand=True)
         self.lower_state.set(True)
         self.lower_chk.grid(row=0, column=0, padx=(0, 5), pady=(0, 5), sticky="W")  # left justify
         self.upper_chk.grid(row=1, column=0, padx=(0, 5), pady=(5, 0), sticky="W")  # left justify
@@ -77,10 +77,10 @@ class MainGUI:
         self.pass_lbl.pack(pady=(15,10))
         self.pass_txt.pack()
 
-        self.entropy_frame.pack(pady=(10, 0), fill='x')
-        self.entropy_bar_w.grid(row=0, column=0, sticky="WE")
-        self.entropy_bar_m.grid(row=0, column=1, padx=5, sticky="WE")
-        self.entropy_bar_s.grid(row=0, column=2, sticky="WE")
+        self.entropy_frame.pack(pady=(10, 0), expand=True)
+        self.entropy_bar_w.grid(row=0, column=0, sticky="W")
+        self.entropy_bar_m.grid(row=0, column=1, padx=10)
+        self.entropy_bar_s.grid(row=0, column=2, sticky="E")
         self.weak_lbl.grid(row=1, column=0)
         self.medium_lbl.grid(row=1, column=1)
         self.strong_lbl.grid(row=1, column=2)

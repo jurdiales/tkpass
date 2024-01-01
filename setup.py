@@ -14,5 +14,5 @@ setup(
     ],
     python_requires='>=3.6',
     package_data={"tkpass": ["password.ico", "*.tcl", "theme/*", "theme/light/*", "theme/dark/*", "forest-light/*", "forest-dark/*"]},
-    install_requires=["tkinter", "pyperclip"],
+    install_requires=["tk", "pyperclip"],
 )
